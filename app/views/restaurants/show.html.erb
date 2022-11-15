@@ -1,0 +1,8 @@
+<h1>Restaurant <%= @restaurant.name %></h1>
+
+<p>Rating: <%= @restaurant.rating %></p>
+<p>Address: <%= @restaurant.address %></p>
+<p>Desc: <%= @restaurant.description %></p>
+
+<%= link_to 'Delete this restaurant',
+    restaurant_path(@restaurant), data: { turbo_method: 'DELETE', turbo_confirm: "Are you sure?" } %>
